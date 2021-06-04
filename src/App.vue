@@ -19,10 +19,10 @@ export default defineComponent({
     locale.value = userLang;
 
     const shortCut = (e: KeyboardEvent) => {
-      if ("Ll".includes(e.key)) {
+      if ("LlЛл".includes(e.key)) {
         locale.value = locale.value == "en-EN" ? "ru-RU" : "en-EN";
       }
-      if ("Tt".includes(e.key)) {
+      if ("TtТт".includes(e.key)) {
         document.body.classList.toggle("dark");
       }
     };
