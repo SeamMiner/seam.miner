@@ -2,17 +2,28 @@
   <div class="container">
     <div class="backgroundWords" id="backWords">
       <div class="word outlined" style="animation-delay: 0">FULL-STACK</div>
-      <div class="word" style="animation-delay: 0.5s">FULL-STACK</div> 
-      <div class="word outlined" style="animation-delay: 0.75s">FULL-STACK</div> 
-      <div class="word" style="animation-delay: 1s">FULL-STACK</div> 
+      <div class="word" style="animation-delay: 0.5s">FULL-STACK</div>
+      <div class="word outlined" style="animation-delay: 0.75s">FULL-STACK</div>
+      <div class="word" style="animation-delay: 1s">FULL-STACK</div>
     </div>
 
     <div class="content">
-      <h2 class="header" v-html="t(`${route.name}.about.title`)"/>
-      <p class="aboutMe" v-html="t(`${route.name}.about.description`)"/>
+      <h2 class="header" v-html="t(`${route.name}.about.title`)" />
+      <p class="aboutMe" v-html="t(`${route.name}.about.description`)" />
       <div class="socials">
-        <a class="social button" v-for="(social, index) in socials" :key="index" :href="social.contact" :class="social.name">
-          <img height="28" width="28" :src="require(`../assets/img/${social.name}.png`)" :alt="social.name">
+        <a
+          class="social button"
+          v-for="(social, index) in socials"
+          :key="index"
+          :href="social.contact"
+          :class="social.name"
+        >
+          <img
+            height="28"
+            width="28"
+            :src="require(`../assets/img/${social.name}.png`)"
+            :alt="social.name"
+          />
           <span class="description">{{ social.name }}</span>
         </a>
       </div>
@@ -22,46 +33,42 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { useI18n } from "vue-i18n"
-import { useRoute } from "vue-router"
-
+import { useI18n } from "vue-i18n";
+import { useRoute } from "vue-router";
 
 export default defineComponent({
   name: "Home",
   setup() {
-
     const { t } = useI18n();
-    const route = useRoute()
-    const socials = ref([ {
-      "name": "Email",
-      "contact": "mailto:niatit@gmail.com"
-      }, 
+    const route = useRoute();
+    const socials = ref([
       {
-        "name": "GitHub",
-        "contact": "https://github.com/SeamMiner"
+        name: "Email",
+        contact: "mailto:niatit@gmail.com",
       },
       {
-        "name": "Telegram",
-        "contact": "https://t.me/SeamMiner"
-      } 
-      ])
+        name: "GitHub",
+        contact: "https://github.com/SeamMiner",
+      },
+      {
+        name: "Telegram",
+        contact: "https://t.me/SeamMiner",
+      },
+    ]);
     return {
       t,
       route,
-      socials
-    }    
-  }
+      socials,
+    };
+  },
 });
 </script>
 
 <style lang="scss" scoped>
-
-
 .container {
-
   & > .backgroundWords {
     display: grid;
-    grid: 1fr / repeat(auto-fit, minmax(320px , 1fr));
+    grid: 1fr / repeat(auto-fit, minmax(320px, 1fr));
     place-items: center;
     height: 100vh;
     overflow: hidden;
@@ -89,7 +96,7 @@ export default defineComponent({
       0% {
         transform: translateY(0%);
       }
-      
+
       50% {
         transform: translateY(-55%);
       }
@@ -99,19 +106,19 @@ export default defineComponent({
     }
 
     @media (max-width: 720px) {
-      grid: repeat(auto-fit, minmax(160px , 1fr)) / 1fr;
+      grid: repeat(auto-fit, minmax(160px, 1fr)) / 1fr;
 
       & > .word {
         writing-mode: horizontal-tb;
         text-orientation: mixed;
         font-size: 160px;
       }
-      
+
       @keyframes word {
         0% {
           transform: translateX(0%);
         }
-        
+
         50% {
           transform: translateX(-40%);
         }
@@ -120,7 +127,6 @@ export default defineComponent({
         }
       }
     }
-
   }
 
   & > .content {
@@ -129,14 +135,13 @@ export default defineComponent({
     z-index: 100;
     width: 50%;
     max-width: 620px;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     position: relative;
     padding: 16px 20px 26px;
     color: var(--primary);
 
-
     &:before {
-      position: absolute; 
+      position: absolute;
       left: 0;
       bottom: 0;
       content: "";
@@ -146,7 +151,7 @@ export default defineComponent({
       background-color: var(--tertiary);
       transform-origin: 0 bottom 0;
       transform: scaleY(0);
-      transition: .4s ease-out;
+      transition: 0.4s ease-out;
       border-radius: 10px;
       z-index: -98;
       transform: scaleY(1);
@@ -154,12 +159,10 @@ export default defineComponent({
 
     & > .socials {
       display: grid;
-      grid: max-content / repeat(auto-fit, minmax(160px , 1fr));
+      grid: max-content / repeat(auto-fit, minmax(160px, 1fr));
       gap: 10px;
-      
 
       & > .social {
-        
         &.Email {
           background: hsl(0, 0, 100%);
           color: hsl(0, 0, 0%);
@@ -173,29 +176,29 @@ export default defineComponent({
         &.Telegram {
           background: hsl(0, 0, 100%);
           // border: 2px solid hsl(0, 0, 90%);
-          color:hsl(200, 80, 53%);
+          color: hsl(200, 80, 53%);
         }
 
         & > img {
-          transition: opacity .5s ease-in-out;
+          transition: opacity 0.5s ease-in-out;
           margin-right: 10px;
           opacity: 1;
         }
       }
-    }  
+    }
   }
 
-  &:hover > .content, &:focus-within > .content {
-      // color: var(--primary);
+  &:hover > .content,
+  &:focus-within > .content {
+    // color: var(--primary);
 
-      &:before {
-        transform: scaleY(1);
-      }
+    &:before {
+      transform: scaleY(1);
+    }
 
-      & > .socials > .social > img {
-        opacity: 1;
-      }
+    & > .socials > .social > img {
+      opacity: 1;
+    }
   }
-
 }
 </style>
