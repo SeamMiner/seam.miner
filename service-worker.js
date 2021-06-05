@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SeamMiner/precache-manifest.48d65529c31ad5acafdf830e19a02e51.js"
+  "/seam.miner/precache-manifest.f74d5f852940a653d1f3f67b10741af0.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "seam.miner"});
