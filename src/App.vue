@@ -14,15 +14,15 @@ export default defineComponent({
       }
     }
 
-    const { locale } = useI18n();
+    const { locale, t } = useI18n();
     const userLang: string = navigator.language;
     locale.value = userLang;
 
     const shortCut = (e: KeyboardEvent) => {
-      if ("LlЛл".includes(e.key)) {
+      if ("1".includes(e.key)) {
         locale.value = locale.value == "en-EN" ? "ru-RU" : "en-EN";
       }
-      if ("TtТт".includes(e.key)) {
+      if ("3".includes(e.key)) {
         document.body.classList.toggle("dark");
       }
     };
@@ -35,35 +35,65 @@ export default defineComponent({
       document.removeEventListener("keydown", shortCut);
     });
 
-    console.log(
-      "Hi, what are u doing here? Ok, anyway u can change language and theme by pressing l and t keys on your keyboard respectivly;)"
-    );
+    console.log(t("welcomeMessage"));
   },
 });
 </script>
 
 <style lang="scss">
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
 body {
   margin: 0;
-  --primary: hsl(0, 0%, 15%);
-  --secondary: hsl(0, 0%, 100%);
-  --tertiary: hsl(220, 10%, 95%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+
+  --primary: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 90%);
+  --content-background: hsl(0, 0%, 100%);
+  --tertiary: hsl(0, 0%, 40%);
+  --shadow-color: hsla(0, 0%, 0%, 0.05);
 
   &.dark {
     --primary: hsl(0, 0%, 100%);
     --secondary: hsl(0, 0%, 15%);
-    --tertiary: hsl(0, 0%, 20%);
+    --content-background: hsl(0, 0%, 10%);
+    --tertiary: hsl(0, 0%, 80%);
+    --shadow-color: hsla(0, 0%, 100%, 0.05);
   }
 }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 p {
   margin: 1em 0 2em 0;
+  color: var(--tertiary);
+  line-height: 1.4;
 }
 
 .container {

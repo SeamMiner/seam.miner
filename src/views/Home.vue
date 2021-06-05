@@ -8,7 +8,7 @@
     </div>
 
     <div class="content">
-      <h2 class="header" v-html="t(`${route.name}.about.title`)" />
+      <h1 class="header" v-html="t(`${route.name}.about.title`)" />
       <p class="aboutMe" v-html="t(`${route.name}.about.description`)" />
       <div class="socials">
         <a
@@ -21,7 +21,7 @@
           <img
             height="28"
             width="28"
-            :src="require(`../assets/img/${social.name}.png`)"
+            :src="require(`../assets/img/${social.name}.svg`)"
             :alt="social.name"
           />
           <span class="description">{{ social.name }}</span>
@@ -68,7 +68,7 @@ export default defineComponent({
 .container {
   & > .backgroundWords {
     display: grid;
-    grid: 1fr / repeat(auto-fit, minmax(320px, 1fr));
+    grid: 1fr / repeat(auto-fit, minmax(20rem, 1fr));
     place-items: center;
     height: 100vh;
     overflow: hidden;
@@ -77,18 +77,17 @@ export default defineComponent({
     z-index: 0;
 
     & > .word {
-      font-size: 320px;
+      font-size: 20rem;
       writing-mode: vertical-rl;
       text-orientation: mixed;
       font-weight: bold;
       animation: word 15s infinite ease-in-out;
-      transform: translateY(100%);
       white-space: nowrap;
       color: var(--primary);
     }
 
     & > .outlined {
-      -webkit-text-stroke: 5px var(--primary);
+      -webkit-text-stroke: .02em var(--primary);
       -webkit-text-fill-color: transparent;
     }
 
@@ -106,12 +105,12 @@ export default defineComponent({
     }
 
     @media (max-width: 720px) {
-      grid: repeat(auto-fit, minmax(160px, 1fr)) / 1fr;
+      grid: repeat(auto-fit, minmax(10rem, 1fr)) / 1fr;
 
       & > .word {
         writing-mode: horizontal-tb;
         text-orientation: mixed;
-        font-size: 160px;
+        font-size: 10rem;
       }
 
       @keyframes word {
@@ -130,32 +129,15 @@ export default defineComponent({
   }
 
   & > .content {
-    background: transparent;
-    color: transparent;
+    background-color: var(--content-background);
     z-index: 100;
     width: 50%;
-    max-width: 620px;
+    max-width: 40rem;
     transition: all 0.5s ease-in-out;
     position: relative;
-    padding: 16px 20px 26px;
-    color: var(--primary);
-
-    &:before {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: var(--tertiary);
-      transform-origin: 0 bottom 0;
-      transform: scaleY(0);
-      transition: 0.4s ease-out;
-      border-radius: 10px;
-      z-index: -98;
-      transform: scaleY(1);
-    }
+    padding: 3.3rem 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 250px 93px var(--shadow-color);
 
     & > .socials {
       display: grid;
@@ -166,6 +148,7 @@ export default defineComponent({
         &.Email {
           background: hsl(0, 0, 100%);
           color: hsl(0, 0, 0%);
+          border: 1px solid hsl(240, 2%, 90%);
         }
 
         &.GitHub {
@@ -175,7 +158,7 @@ export default defineComponent({
 
         &.Telegram {
           background: hsl(0, 0, 100%);
-          // border: 2px solid hsl(0, 0, 90%);
+          border: 1px solid hsl(240, 2%, 90%);
           color: hsl(200, 80, 53%);
         }
 
@@ -185,19 +168,6 @@ export default defineComponent({
           opacity: 1;
         }
       }
-    }
-  }
-
-  &:hover > .content,
-  &:focus-within > .content {
-    // color: var(--primary);
-
-    &:before {
-      transform: scaleY(1);
-    }
-
-    & > .socials > .social > img {
-      opacity: 1;
     }
   }
 }
