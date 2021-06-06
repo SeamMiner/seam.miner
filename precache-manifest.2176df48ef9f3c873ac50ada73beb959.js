@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2fc113d720d4bc9524d3",
+    "revision": "513128b2bc2b00a36bd7",
     "url": "/seam.miner/css/app.e3d9220b.css"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/seam.miner/img/Logo.be3b2245.svg"
   },
   {
-    "revision": "861cd01e747d9cf34a9061f231bf5b6d",
+    "revision": "f6ecf568b30f566d5a6e722947ad16aa",
     "url": "/seam.miner/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/seam.miner/js/404.3e3b973d.js"
   },
   {
-    "revision": "2fc113d720d4bc9524d3",
-    "url": "/seam.miner/js/app.14bf672e.js"
+    "revision": "513128b2bc2b00a36bd7",
+    "url": "/seam.miner/js/app.57251c68.js"
   },
   {
     "revision": "2b500eea31d822e566e8",
