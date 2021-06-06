@@ -2,7 +2,7 @@
   "Home": {
     "about": {
       "title": "Full-stack разработчик",
-      "description": "Я <strong>Платон&nbsp;Лапп</strong> &mdash; Full-Stack Web Developer, иначе&nbsp;же говоря разработчик, который сделает все что тебе нужно.<br><br>Связаться со&nbsp;мной или посмотреть мои работы можно благодаря прекрасным ссылкам..."
+      "description": "Я <strong>Платон&nbsp;Лапп</strong> &mdash; Full-Stack Web Developer. В&nbsp;основном пишу Frontend на&nbsp;Vue, Backend на&nbsp;Django. Также знаком с&nbsp;React, React-Native, PHP, Laravel.<br><br>Связаться со&nbsp;мной или посмотреть мои работы можно благодаря иконкам..."
     },
     "socials": {
       "Email": "Email",
