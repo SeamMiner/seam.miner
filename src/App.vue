@@ -36,6 +36,8 @@ export default defineComponent({
     });
 
     console.log(t("welcomeMessage"));
+    console.log(t("greensDesign"));
+    
   },
 });
 </script>
@@ -54,24 +56,34 @@ export default defineComponent({
   font-family: "Inter", system-ui, sans-serif;
 }
 
+html {
+  font-size: 16px;
+
+  @media (max-width: 720px) {
+    font-size: 8px;
+  }
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
 
-  --primary: hsl(0, 0%, 0%);
-  --secondary: hsl(0, 0%, 90%);
-  --content-background: hsl(0, 0%, 100%);
-  --tertiary: hsl(0, 0%, 40%);
+  --primary: hsla(60, 43%, 43%, 1);
+  --secondary: hsla(0, 0%, 100%, 1);
+  --border-color: hsla(240, 2%, 90%, 1);
+  --tertiary: hsla(0, 0%, 40%, 1);
   --shadow-color: hsla(0, 0%, 0%, 0.05);
+  --headline-color: hsla(0, 0%, 0%, 1);
 
   &.dark {
-    --primary: hsl(0, 0%, 100%);
+    --primary: hsla(60, 54%, 74%, 1);
     --secondary: hsl(0, 0%, 15%);
-    --content-background: hsl(0, 0%, 10%);
+    --border-color: hsl(10, 2%, 10%);
     --tertiary: hsl(0, 0%, 80%);
     --shadow-color: hsla(0, 0%, 100%, 0.05);
+    --headline-color: hsla(0, 0%, 90%, 1);
   }
 }
 
@@ -81,9 +93,9 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--primary);
+  color: var(--headline-color);
   line-height: 1.2;
-  margin-top: 0;
+  margin: 0;
 }
 
 h1 {
@@ -91,9 +103,14 @@ h1 {
 }
 
 p {
-  margin: 1em 0 2em 0;
   color: var(--tertiary);
   line-height: 1.4;
+  margin: 0;
+  font-size: 16px;
+}
+
+strong {
+  color: var(--primary);
 }
 
 .container {
@@ -104,23 +121,6 @@ p {
   align-items: center;
   color: var(--primary);
   background-color: var(--secondary);
-}
-
-.button {
-  padding: 8px 16px 7px;
-  transition: transform 0.2s ease-in-out;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-  background: var(--primary);
-  color: var(--secondary);
-
-  &:hover {
-    transform: translate(-5px, -5px);
-  }
+  padding: 0 1rem;
 }
 </style>
