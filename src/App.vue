@@ -84,7 +84,7 @@ body {
     --primary: hsla(60, 54%, 74%, 1);
     --secondary: hsla(0, 0%, 15%, 1);
     --border-color: hsla(10, 2%, 10%, 1);
-    --tertiary: hsal(0, 0%, 80%, 1);
+    --tertiary: hsla(0, 0%, 80%, 1);
     --shadow-color: hsla(0, 0%, 100%, 0.05);
     --headline-color: hsla(0, 0%, 90%, 1);
   }
