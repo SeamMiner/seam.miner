@@ -119,7 +119,7 @@ export default defineComponent({
     const socials = ref([
       {
         name: "Email",
-        contact: "mailto:niatit@gmail.com",
+        contact: "mailto:niatit130@gmail.com",
       },
       {
         name: "GitHub",
