@@ -82,9 +82,9 @@ body {
 
   &.dark {
     --primary: hsla(60, 54%, 74%, 1);
-    --secondary: hsl(0, 0%, 15%);
-    --border-color: hsl(10, 2%, 10%);
-    --tertiary: hsl(0, 0%, 80%);
+    --secondary: hsla(0, 0%, 15%, 1);
+    --border-color: hsla(10, 2%, 10%, 1);
+    --tertiary: hsal(0, 0%, 80%, 1);
     --shadow-color: hsla(0, 0%, 100%, 0.05);
     --headline-color: hsla(0, 0%, 90%, 1);
   }
