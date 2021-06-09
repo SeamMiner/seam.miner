@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "513128b2bc2b00a36bd7",
-    "url": "/seam.miner/css/app.e3d9220b.css"
+    "revision": "80182cdcb7741f37c8e9",
+    "url": "/seam.miner/css/app.178c9c78.css"
   },
   {
     "revision": "be3b22453444d4240fe3e6adae536797",
     "url": "/seam.miner/img/Logo.be3b2245.svg"
   },
   {
-    "revision": "f6ecf568b30f566d5a6e722947ad16aa",
+    "revision": "72b17bde5517ade5b6f8687272cf2dc9",
     "url": "/seam.miner/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/seam.miner/js/404.3e3b973d.js"
   },
   {
-    "revision": "513128b2bc2b00a36bd7",
-    "url": "/seam.miner/js/app.57251c68.js"
+    "revision": "80182cdcb7741f37c8e9",
+    "url": "/seam.miner/js/app.60909fae.js"
   },
   {
     "revision": "2b500eea31d822e566e8",
