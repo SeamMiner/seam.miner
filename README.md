@@ -1,4 +1,5 @@
 # seam.miner
+https://seamminer.github.io/seam.miner/
 
 ## Project setup
 ```
