@@ -5,4 +5,6 @@ import router from "./router";
 import store from "./store";
 import i18n from "./i18n";
 
-createApp(App).use(i18n).use(store).use(router).mount("#app");
+const app = createApp(App);
+app.config.globalProperties.window = window;
+app.use(i18n).use(store).use(router).mount("#app");

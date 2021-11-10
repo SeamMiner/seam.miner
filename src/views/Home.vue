@@ -13,7 +13,7 @@
       <div class="word" style="animation-delay: 1s">FULL-STACK FULL-STACK</div>
     </div>
 
-    <div class="content">
+    <Surface>
       <h1 class="headline" v-html="t(`${route.name}.about.title`)" />
       <p class="description" v-html="t(`${route.name}.about.description`)" />
       <div class="socials">
@@ -67,7 +67,7 @@
           alt="Beautiful logo designed by Alex Greene"
         />
       </div>
-    </div>
+    </Surface>
   </div>
 </template>
 
@@ -76,8 +76,13 @@ import { defineComponent, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 
+import Surface from "@/components/Surface.vue";
+
 export default defineComponent({
   name: "Home",
+  components: {
+    Surface,
+  },
   setup() {
     const { t } = useI18n();
     const route = useRoute();
@@ -168,13 +173,6 @@ export default defineComponent({
   }
 
   & > .content {
-    background-color: var(--secondary);
-    border: 1px solid var(--border-color);
-    z-index: 100;
-    max-width: 45rem;
-    transition: all 0.5s ease-in-out;
-    padding: 4.5rem 2.5rem;
-    border-radius: 2rem;
     box-shadow: 0px 4px 250px 93px var(--shadow-color);
     display: grid;
     grid:

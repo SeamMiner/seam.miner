@@ -1,14 +1,11 @@
 {
   "Home": {
     "about": {
-      "title": "Full-stack разработчик",
-      "description": "Я <strong>Платон&nbsp;Лапп</strong> &mdash; Full-Stack Web Developer. В&nbsp;основном пишу Frontend на&nbsp;Vue, Backend на&nbsp;Django. Также знаком с&nbsp;React, React-Native, PHP, Laravel.<br><br>Связаться со&nbsp;мной или посмотреть мои работы можно благодаря иконкам..."
+      "title": "Привет, я Платон",
+      "description": "full-stack веб разработчик из Санкт-Петербурга. Внимание к деталям, профессиональный и универсальный код - это все про меня! Не стесняйтесь обращаться ко мне!",
+      "contacts": "Если хочешь увидеть что Я сделал/делаю/думаю - контакты снизу" 
     },
-    "socials": {
-      "Email": "Email",
-      "GitHub": "GitHub",
-      "Telegram": "Telegram"
-    }
+    "skills": "Мой стек"
   },
   "404": {
     "title": "Упс, страница не найдена...",
