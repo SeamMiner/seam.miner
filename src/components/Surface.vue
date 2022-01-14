@@ -108,7 +108,7 @@ export default defineComponent({
   z-index: 50;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 12px;
+  border-radius: 30px;
   // display: flex;
 
   transition: all 0.15s ease-in-out;

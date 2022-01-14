@@ -7,7 +7,6 @@
       :rows="4"
       :gradient="{ id: 'About', color1: 'secondary-bg', color2: 'ts' }"
     >
-      <h3 v-html="t(`${route.name}.about.title`)"></h3>
       <p v-html="t(`${route.name}.about.description`)"></p>
       <p v-html="t(`${route.name}.about.contacts`)"></p>
     </Surface>
@@ -27,16 +26,16 @@
       </div>
     </Surface>
     <Surface
-      class="mbp"
-      id="mbp"
-      href="https://github.com/SeamMiner/mbp"
+      class="webpaint"
+      id="webpaint"
+      href="https://webpaint.app/"
       :cols="6"
       :rows="3"
-      :gradient="{ color1: '#FFFFFF', color2: '#FFFFFF' }"
+      :gradient="{ color1: '#000000', color2: '#000000' }"
     >
       <img
         draggable="false"
-        src="../assets/img/mbp.png"
+        src="../assets/img/webpaint.png"
         alt="My Blood Pressure Preview"
       />
     </Surface>
@@ -269,9 +268,11 @@ export default defineComponent({
       }
     }
 
-    & > .mbp {
+    & > .webpaint {
       display: grid;
-      place-items: center;
+      place-items: flex-end;
+      padding: 0;
+      overflow: hidden;
 
       & > img {
         width: 100%;
@@ -282,9 +283,11 @@ export default defineComponent({
       height: 112px;
       width: 112px;
       padding: 12px;
+      border-radius: 12px;
 
       & .socials {
         padding: 6px;
+        border-radius: 12px;
       }
 
       & > .upwork {

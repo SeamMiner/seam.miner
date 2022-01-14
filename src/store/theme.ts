@@ -98,7 +98,7 @@ const themeModuleMutations = <MutationTree<ThemeModuleState>>{
 
 const themeModuleActions = <ActionTree<ThemeModuleState, null>>{
   init(context) {
-    const theme = localStorage.getItem("webpaint:selectedTheme") || "";
+    const theme = localStorage.getItem("seamminer:selectedTheme") || "";
     if (Object.values<string>(themes).includes(theme)) {
       context.dispatch("setTheme", theme);
     } else if (
