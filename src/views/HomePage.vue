@@ -54,7 +54,6 @@
         <span>Vuex</span>
         <span>Sass</span>
         <span>Django</span>
-        <span>PHP</span>
       </tags>
     </Surface>
     <Surface
@@ -263,6 +262,10 @@ export default defineComponent({
           margin-right: 8px;
           margin-bottom: 8px;
         }
+      }
+
+      @media (max-width: 512px) {
+        grid-column: span 6;
       }
     }
 

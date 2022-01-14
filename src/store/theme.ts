@@ -92,27 +92,31 @@ const themeModuleState: ThemeModuleState = {
 const themeModuleMutations = <MutationTree<ThemeModuleState>>{
   change(state, props: { newTheme: themes }) {
     state.activeTheme = props.newTheme;
+    localStorage.setItem("seamminer:selectedTheme", props.newTheme);
   },
 };
 
 const themeModuleActions = <ActionTree<ThemeModuleState, null>>{
   init(context) {
-    if (window.matchMedia("(prefers-color-scheme)").media !== "not all") {
+    const theme = localStorage.getItem("webpaint:selectedTheme") || "";
+    if (Object.values<string>(themes).includes(theme)) {
+      context.dispatch("setTheme", theme);
+    } else if (
+      window.matchMedia("(prefers-color-scheme)").media !== "not all"
+    ) {
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        context.dispatch("setDark");
+        context.dispatch("setTheme", themes.dark);
+      } else {
+        context.dispatch("setTheme", themes.light);
       }
     } else {
-      context.dispatch("setLight");
+      context.dispatch("setTheme", themes.light);
     }
+
   },
 
-  setLight(context) {
-    context.commit("change", { newTheme: themes.light });
-    context.dispatch("updateProperties");
-  },
-
-  setDark(context) {
-    context.commit("change", { newTheme: themes.dark });
+  setTheme(context, newTheme) {
+    context.commit("change", { newTheme: newTheme });
     context.dispatch("updateProperties");
   },
 
