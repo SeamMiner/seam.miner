@@ -10,7 +10,6 @@ module.exports = {
       fullInstall: true,
     },
   },
-  publicPath: "/seam.miner",
   pwa: {
     manifestOptions: {
       name: "seam.miner",
