@@ -112,7 +112,6 @@ const themeModuleActions = <ActionTree<ThemeModuleState, null>>{
     } else {
       context.dispatch("setTheme", themes.light);
     }
-
   },
 
   setTheme(context, newTheme) {
