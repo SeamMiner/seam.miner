@@ -8,7 +8,7 @@
       <h1 v-html="t('Home.about.title')"></h1>
     </div>
     <div class="about">
-      <div class="goDownButton" @click="goDown">
+      <a class="goDownButton" href="#projects">
         <svg
           width="302"
           height="302"
@@ -21,18 +21,16 @@
             fill="currentColor"
           />
         </svg>
-      </div>
-      <div class="content">
-        <p v-html="t('Home.about.description')"></p>
+      </a>
+      <p class="description" v-html="t('Home.about.description')"></p>
 
-        <div class="skills">
-          <div
-            class="skill"
-            v-for="skill in store.state.personal.skills"
-            :key="skill"
-          >
-            {{ skill }}
-          </div>
+      <div class="skills">
+        <div
+          class="skill"
+          v-for="skill in store.state.personal.skills"
+          :key="skill"
+        >
+          {{ skill }}
         </div>
       </div>
       <p class="links">
@@ -44,9 +42,12 @@
         >
       </p>
     </div>
-    <template v-for="project in store.state.personal.projects" :key="project">
-      <Competition :project="project" />
-    </template>
+    <div id="projects">
+      <template v-for="project in store.state.personal.projects" :key="project" >
+        <Competition :project="project" />
+      </template>
+    </div>
+
     <div class="university">
       <h2 v-html="t('Home.about.university')"></h2>
       <span>2019&nbsp;&mdash; 2023</span>
@@ -104,29 +105,60 @@ section {
       line-height: 110%;
       text-align: center;
       letter-spacing: -0.04em;
+
+      @media (max-width: 768px) {
+        font-size: 3rem;
+      }
     }
   }
 
   .about {
-    display: flex;
-    gap: 1rem;
+    display: grid;
+    grid: 'down about links' max-content
+          'down skills links' max-content / max-content minmax(200px, 600px) minmax(200px, max-content)
+    ;
+    gap: 3rem 2rem;
     justify-content: space-between;
     padding: 1.75rem 0 3.75rem;
 
-    .goDownButton {
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      background: var(--secondary-bg);
-      color: var(--text);
-      height: 100%;
-      align-self: flex-end;
-      cursor: pointer;
+    @media (max-width: 992px) {
+      grid: 'about about' max-content
+            'down links' max-content
+            'skills skills' max-content / 1fr minmax(200px, max-content)
+      ;
     }
 
-    .content {
-      max-width: 600px;
+    .goDownButton {
+      grid-area: down;
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+
+      > svg {
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: var(--secondary-bg);
+        color: var(--text);
+        @media (max-width: 992px) {
+          height: 6.25rem;
+          width: 6.25rem;
+        }
+      }
+    }
+
+
+      > .description {
+        grid-area: about;
+        max-width: 600px;
+        @media (max-width: 992px) {
+          justify-self: center;
+          font-size: 1.25rem;
+        }
+      }
 
       .skills {
+        grid-area: skills;
         display: flex;
         flex-wrap: wrap;
         gap: 0.75rem 1rem;
@@ -138,16 +170,19 @@ section {
           padding: 0.5rem 1rem;
           border: 1px solid var(--border);
           border-radius: 100px;
+
+          @media (max-width: 992px) {
+            font-size: 1rem;
+          }
         }
       }
-    }
 
     .links {
+      grid-area: links;
       display: flex;
       flex-flow: column;
       align-items: flex-start;
       gap: 2.5rem;
-      min-width: 200px;
     }
   }
 
@@ -155,11 +190,18 @@ section {
     margin: 6.5rem 7.25rem;
     border-bottom: none;
 
+    @media (max-width: 768px) {
+      margin: 2.5rem 1.25rem;
+    }
+
     > h2 {
       font-weight: 500;
-      line-height: 68px;
+      line-height: 1.4;
       letter-spacing: -0.04em;
       margin: 0 0 1.5rem;
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
     }
 
     > span {

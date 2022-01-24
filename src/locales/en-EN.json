@@ -20,16 +20,30 @@
           "specialty": "Front-end, programming"
         },
         "LODFinal": {
-          "type": "Hackthon",
+          "type": "Hackathon",
           "description": "Leaders of Digitals: Final 2021",
           "specialty": "Front-end, programming"
         },
         "LODHS": {
-          "type": "Hackthon",
+          "type": "Hackathon",
           "description": "Leaders of Digitals: Health and Science",
           "specialty": "Front-end, programming"
+        },
+        "tsOld": {
+          "type": "Long-time project",
+          "description": "Typing School Promo Website",
+          "specialty": "Front-end, programming"
+        },
+        "VK": {
+          "type": "Hackathon",
+          "description": "VK Hackathon «Vezdekod»: Prize-winning place in the 2-week hackathon of the social network Vkontakte.",
+          "specialty": "Front-end, Back-end"
+        },
+        "MIET": {
+          "type": "Hackathon",
+          "description": "Hackathon «MIET University»: 1st place in the 48-hour hackathon of MIET University in the case of HERE technologies",
+          "specialty": "Front-end, programming"
         }
-
       }
     }
   },

@@ -201,6 +201,11 @@ strong {
     color: #1d1d1d;
     font-weight: 600;
     background: #ffffff;
+    transition: all .15s ease-in-out;
+
+    &:focus {
+      box-shadow: 0 0 0 4px var(--selector);
+    }
   }
 }
 
@@ -215,12 +220,17 @@ footer {
 
   h1 {
     font-size: 8rem;
+    font-weight: 600;
     color: var(--text);
+
+    @media (max-width: 768px) {
+      font-size: 4rem;
+    }
   }
 
   .links {
     display: flex;
-    gap: 1rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
   }
 }

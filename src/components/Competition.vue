@@ -16,7 +16,7 @@
         :src="require(`@/assets/img/projects/${project.img}`)"
         alt="Huh, I guess u've bad internet connection"
       />
-      <a :href="project.link">{{ t(`Home.projects.open`) }}</a>
+      <a v-if="project.link" :href="project.link">{{ t(`Home.projects.open`) }}</a>
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default defineComponent({
   padding: 4rem 0 8.75rem;
   display: grid;
   justify-content: space-between;
-  grid: "time topic link" / minmax(max-content, 200px) minmax(auto, 600px) max-content;
+  grid: "time topic link" / minmax(max-content, 200px) minmax(auto, 600px) minmax(max-content, 200px);
   gap: 1rem;
 
   @media (max-width: 768px) {
@@ -90,6 +90,8 @@ export default defineComponent({
     display: flex;
     gap: 0.75rem;
     align-items: flex-start;
+    justify-content: flex-end;
+
     > img {
       height: 2.875rem;
       width: 2.875rem;
@@ -98,10 +100,20 @@ export default defineComponent({
 
     > a {
       padding: 0.5rem 1rem 0.5625rem;
-      background: var(--primary-bg);
+      background: var(--selector);
       border-radius: 100px;
       color: var(--selector-text);
       text-decoration: none;
+      transition: all .15s ease-in-out;
+
+
+      &:hover, &:focus {
+        opacity: .9;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 4px var(--selector);
+      }
     }
   }
 }

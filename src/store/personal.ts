@@ -35,6 +35,16 @@ const personalState = {
       id: "ts"
     },
     {
+      description:
+        "Typing School Promo Website",
+      specialty: "Front-end, programming",
+      img: "TS.svg",
+      dateStart: "2020",
+      type: "Long-time project",
+      link: "https://seamminer.github.io/ts_front_only/",
+      id: "tsOld"
+    },
+    {
       description: "Leaders of Digitals: Final 2021",
       specialty: "Front-end, programming",
       img: "LOD.svg",
@@ -53,6 +63,24 @@ const personalState = {
       type: "Hackathon",
       link: "https://github.com/dipuzyrev/mbp",
       id: "LODHS"
+    },
+    {
+      description: "VK Hackathon «Vezdekod»: Prize-winning place in the 2-week hackathon of the social network Vkontakte.",
+      specialty: "Front-end, Back-end",
+      img: "VK.svg",
+      dateStart: "2020",
+      dateEnd: "2020",
+      type: "Hackathon",
+      id: "VK"
+    },
+    {
+      description: "Hackathon «MIET University»: 1st place in the 48-hour hackathon of MIET University in the case of HERE technologies",
+      specialty: "Front-end, programming",
+      img: "MIET.svg",
+      dateStart: "2020",
+      dateEnd: "2020",
+      type: "Hackathon",
+      id: "MIET"
     },
   ],
 };
