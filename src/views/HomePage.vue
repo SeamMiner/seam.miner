@@ -95,6 +95,14 @@ section {
     border-bottom: 1px solid var(--border);
   }
 
+  #projects {
+    border-bottom: none;
+
+    > div {
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
   .title {
     topic {
       font-size: 1.5rem;

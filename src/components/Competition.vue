@@ -92,6 +92,10 @@ export default defineComponent({
     align-items: flex-start;
     justify-content: flex-end;
 
+    @media (max-width: 992px) {
+      justify-content: flex-start;
+    }
+
     > img {
       height: 2.875rem;
       width: 2.875rem;
