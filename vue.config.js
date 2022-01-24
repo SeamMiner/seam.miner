@@ -12,37 +12,11 @@ module.exports = {
   },
   pwa: {
     manifestOptions: {
-      name: "seam.miner",
-      short_name: "seam.miner",
+      name: "PLaton Lapp",
+      short_name: "Worst Front-end developper",
       start_url: ".",
       display: "standalone",
       theme_color: "#000000",
-      shortcuts: [
-        {
-          name: "Telegram",
-          short_name: "tg",
-          description: "Feel free to contact me!",
-          url: "/tg",
-        },
-        {
-          name: "Email",
-          short_name: "mail",
-          description: "Feel free to contact me!",
-          url: "/mail",
-        },
-        {
-          name: "GitHub",
-          short_name: "gh",
-          description: "Feel free to contact me!",
-          url: "/gh",
-        },
-        {
-          name: "Upwork",
-          short_name: "upw",
-          description: "Feel free to contact me!",
-          url: "/upwork",
-        },
-      ],
     },
 
     themeColor: "#808000",

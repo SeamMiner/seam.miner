@@ -9,11 +9,9 @@ enum themeVariables {
   primaryBg = "primary-bg",
   secondaryBg = "secondary-bg",
   text = "text",
-  hColor = "headline-color",
   selector = "selector",
-  ts = "ts",
-  gradientPrimary = "gradient-primary",
-  gradientSecondary = "gradient-secondary",
+  selectorText = "selector-text",
+  border = "border",
 }
 
 type ThemeColorInfo = {
@@ -33,57 +31,43 @@ const themeModuleState: ThemeModuleState = {
     {
       name: themeVariables.primaryBg,
       value: new Map([
-        [themes.light, "#ebebeb"],
-        [themes.dark, "#141414"],
+        [themes.light, "#C7C789"],
+        [themes.dark, "#C7C789"],
       ]),
     },
     {
       name: themeVariables.secondaryBg,
       value: new Map([
         [themes.light, "#ffffff"],
-        [themes.dark, "#282828"],
+        [themes.dark, "#111111"],
       ]),
     },
     {
       name: themeVariables.text,
       value: new Map([
-        [themes.light, "#282828"],
-        [themes.dark, "#e6e6e6"],
-      ]),
-    },
-    {
-      name: themeVariables.hColor,
-      value: new Map([
         [themes.light, "#000000"],
-        [themes.dark, "#ffffff"],
+        [themes.dark, "#FFFFFF"],
       ]),
     },
     {
       name: themeVariables.selector,
       value: new Map([
-        [themes.light, "#9d9d3f"],
-        [themes.dark, "#e1e199"],
+        [themes.light, "#ACAC6E"],
+        [themes.dark, "#ACAC6E"],
       ]),
     },
     {
-      name: themeVariables.ts,
+      name: themeVariables.selectorText,
       value: new Map([
-        [themes.light, "#ffffff"],
-        [themes.dark, "#1f1f1f"],
+        [themes.light, "#FFFFFF"],
+        [themes.dark, "#FFFFFF"],
       ]),
     },
     {
-      name: themeVariables.gradientPrimary,
+      name: themeVariables.border,
       value: new Map([
-        [themes.light, "#B030AC"],
-        [themes.dark, "#F9F9E0"],
-      ]),
-    },
-    {
-      name: themeVariables.gradientSecondary,
-      value: new Map([
-        [themes.light, "#409BB0"],
-        [themes.dark, "#E6E6E6"],
+        [themes.light, "#EBEBEB"],
+        [themes.dark, "#1F1F1F"],
       ]),
     },
   ],
