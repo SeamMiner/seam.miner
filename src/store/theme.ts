@@ -25,7 +25,7 @@ type ThemeModuleState = {
 };
 
 const themeModuleState: ThemeModuleState = {
-  activeTheme: themes.light, //TODO: add colors to supereelipses and images
+  activeTheme: themes.light,
 
   colors: [
     {

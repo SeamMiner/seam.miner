@@ -58,7 +58,6 @@
 import { defineComponent, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
-import { createSquircleCorners } from "@/superellipse";
 
 import Link from "@/components/Link.vue";
 import Competition from "@/components/Competition.vue";
@@ -82,7 +81,6 @@ export default defineComponent({
     return {
       t,
       route,
-      createSquircleCorners,
       store,
       goDown,
     };
