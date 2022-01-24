@@ -2,8 +2,6 @@
   <div class="container">
     <a class="telegram" href="https://t.me/SeamMiner">
       <svg
-        width="24"
-        height="24"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -205,6 +203,20 @@ strong {
 
     &:focus {
       box-shadow: 0 0 0 4px var(--selector);
+    }
+
+    & > svg {
+      height: 1.5rem;
+      width: 1.5rem;
+
+       @media (max-width: 768px) {
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
     }
   }
 }
