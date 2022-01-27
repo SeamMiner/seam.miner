@@ -24,7 +24,7 @@ function loadLocaleMessages(): LocaleMessages<VueMessageType> {
 }
 
 export default createI18n({
-  locale: process.env.VUE_APP_I18N_LOCALE || "en-EN",
-  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || "en-EN",
+  locale: process.env.VUE_APP_I18N_LOCALE || "en-US",
+  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || "en-US",
   messages: loadLocaleMessages(),
 });

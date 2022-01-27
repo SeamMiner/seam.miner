@@ -1,11 +1,7 @@
 <template>
   <div class="container">
     <a class="telegram" href="https://t.me/SeamMiner">
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -49,7 +45,7 @@ export default defineComponent({
     Link,
   },
   setup() {
-    const { locale, t } = useI18n();
+    const { locale, t, availableLocales } = useI18n();
     const store = useStore();
     const userLang = navigator.language;
     const footer: Ref<null | HTMLElement> = ref(null);
@@ -64,7 +60,10 @@ export default defineComponent({
 
     const shortCut = (e: KeyboardEvent) => {
       if ("1".includes(e.key)) {
-        locale.value = locale.value == "en-EN" ? "ru-RU" : "en-EN";
+        locale.value =
+          locale.value == availableLocales[0]
+            ? availableLocales[1]
+            : availableLocales[0];
       }
       if ("3".includes(e.key)) {
         store.dispatch("theme/toggle");
@@ -199,7 +198,8 @@ strong {
     color: #1d1d1d;
     font-weight: 600;
     background: #ffffff;
-    transition: all .15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    z-index: 100;
 
     &:focus {
       box-shadow: 0 0 0 4px var(--selector);
@@ -209,7 +209,7 @@ strong {
       height: 1.5rem;
       width: 1.5rem;
 
-       @media (max-width: 768px) {
+      @media (max-width: 768px) {
         height: 1rem;
         width: 1rem;
       }
@@ -234,6 +234,7 @@ footer {
     font-size: 8rem;
     font-weight: 600;
     color: var(--text);
+    letter-spacing: -0.04em;
 
     @media (max-width: 768px) {
       font-size: 4rem;

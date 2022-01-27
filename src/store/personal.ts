@@ -22,7 +22,7 @@ const personalState = {
       dateStart: "2021",
       type: "Long-time project",
       link: "https://webpaint.app/",
-      id: "wp"
+      id: "wp",
     },
     {
       description:
@@ -32,17 +32,16 @@ const personalState = {
       dateStart: "2020",
       type: "Long-time project",
       link: "https://typing.school/",
-      id: "ts"
+      id: "ts",
     },
     {
-      description:
-        "Typing School Promo Website",
+      description: "Typing School Promo Website",
       specialty: "Front-end, programming",
       img: "TS.svg",
       dateStart: "2020",
       type: "Long-time project",
       link: "https://seamminer.github.io/ts_front_only/",
-      id: "tsOld"
+      id: "tsOld",
     },
     {
       description: "Leaders of Digitals: Final 2021",
@@ -52,7 +51,7 @@ const personalState = {
       dateEnd: "2021",
       type: "Hackathon",
       link: "https://github.com/dipuzyrev/tim",
-      id: "LODFinal"
+      id: "LODFinal",
     },
     {
       description: "Leaders of Digitals: Helath and Science",
@@ -62,25 +61,27 @@ const personalState = {
       dateEnd: "2021",
       type: "Hackathon",
       link: "https://github.com/dipuzyrev/mbp",
-      id: "LODHS"
+      id: "LODHS",
     },
     {
-      description: "VK Hackathon «Vezdekod»: Prize-winning place in the 2-week hackathon of the social network Vkontakte.",
+      description:
+        "VK Hackathon «Vezdekod»: Prize-winning place in the 2-week hackathon of the social network Vkontakte.",
       specialty: "Front-end, Back-end",
       img: "VK.svg",
       dateStart: "2020",
       dateEnd: "2020",
       type: "Hackathon",
-      id: "VK"
+      id: "VK",
     },
     {
-      description: "Hackathon «MIET University»: 1st place in the 48-hour hackathon of MIET University in the case of HERE technologies",
+      description:
+        "Hackathon «MIET University»: 1st place in the 48-hour hackathon of MIET University in the case of HERE technologies",
       specialty: "Front-end, programming",
       img: "MIET.svg",
       dateStart: "2020",
       dateEnd: "2020",
       type: "Hackathon",
-      id: "MIET"
+      id: "MIET",
     },
   ],
 };

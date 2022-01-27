@@ -1,22 +1,35 @@
 <template>
   <div class="competition">
     <div class="time">
-      {{ t(`Home.projects.decriptions.${project.id}.type`) || project.type }} <br />
+      {{ t(`Home.projects.decriptions.${project.id}.type`) || project.type }}
+      <br />
       <span>{{ project.dateStart }}</span
       >&mdash;&nbsp;<span :class="{ now: !project.dateEnd }">{{
         project.dateEnd || t(`Home.projects.now`)
       }}</span>
     </div>
     <div class="topic">
-      <h2>{{ t(`Home.projects.decriptions.${project.id}.description`) || project.description }}</h2>
-      <p>{{ t(`Home.projects.decriptions.${project.id}.specialty`) || project.specialty }}</p>
+      <h2>
+        {{
+          t(`Home.projects.decriptions.${project.id}.description`) ||
+          project.description
+        }}
+      </h2>
+      <p>
+        {{
+          t(`Home.projects.decriptions.${project.id}.specialty`) ||
+          project.specialty
+        }}
+      </p>
     </div>
     <div class="link">
       <img
         :src="require(`@/assets/img/projects/${project.img}`)"
         alt="Huh, I guess u've bad internet connection"
       />
-      <a v-if="project.link" :href="project.link">{{ t(`Home.projects.open`) }}</a>
+      <a v-if="project.link" :href="project.link">{{
+        t(`Home.projects.open`)
+      }}</a>
     </div>
   </div>
 </template>
@@ -28,11 +41,11 @@ import { useI18n } from "vue-i18n";
 export default defineComponent({
   props: ["project"],
   setup() {
-    const { t } = useI18n()
+    const { t } = useI18n();
     return {
-      t
-    }
-  }
+      t,
+    };
+  },
 });
 </script>
 
@@ -41,7 +54,10 @@ export default defineComponent({
   padding: 4rem 0 8.75rem;
   display: grid;
   justify-content: space-between;
-  grid: "time topic link" / minmax(max-content, 200px) minmax(auto, 600px) minmax(max-content, 200px);
+  grid: "time topic link" / minmax(max-content, 200px) minmax(auto, 600px) minmax(
+      max-content,
+      200px
+    );
   gap: 1rem;
 
   @media (max-width: 768px) {
@@ -108,11 +124,11 @@ export default defineComponent({
       border-radius: 100px;
       color: var(--selector-text);
       text-decoration: none;
-      transition: all .15s ease-in-out;
+      transition: all 0.15s ease-in-out;
 
-
-      &:hover, &:focus {
-        opacity: .9;
+      &:hover,
+      &:focus {
+        opacity: 0.9;
       }
 
       &:focus {
