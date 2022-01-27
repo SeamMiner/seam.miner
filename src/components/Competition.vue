@@ -9,18 +9,8 @@
       }}</span>
     </div>
     <div class="topic">
-      <h2>
-        {{
-          t(`Home.projects.decriptions.${project.id}.description`) ||
-          project.description
-        }}
-      </h2>
-      <p>
-        {{
-          t(`Home.projects.decriptions.${project.id}.specialty`) ||
-          project.specialty
-        }}
-      </p>
+      <h2 v-html="t(`Home.projects.decriptions.${project.id}.description`) || project.description"></h2>
+      <p v-html="t(`Home.projects.decriptions.${project.id}.specialty`) || project.specialty"></p>
     </div>
     <div class="link">
       <img

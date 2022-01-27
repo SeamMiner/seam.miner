@@ -2,7 +2,7 @@
   "Home": {
     "about": {
       "title": "Full-stack web developer <br> from Saint-Petersburg",
-      "description": "Hi, I’m Platon Lapp, a full-stack web developer from Saint-Petersburg. Attention to detail, professional and versatile code — it’s all about me. Feel free to contact me. <br> If you want to see my past and current work, just check out the contacts.",
+      "description": "Hi, I&rsquo;m Platon Lapp, a&nbsp;full-stack web developer from Saint-Petersburg. Attention to&nbsp;detail, professional and versatile code&nbsp;&mdash; it&rsquo;s all about&nbsp;me. Feel free to&nbsp;contact&nbsp;me. <br> If&nbsp;you want to&nbsp;see my&nbsp;past and current work, just check out the contacts.",
       "university": "The Bonch-Bruevich Saint Petersburg State University of&nbsp;Telecommunications"
     },
     "projects": {
@@ -11,22 +11,22 @@
       "decriptions": {
         "wp": {
           "type": "Long-time project",
-          "description": "Web Paint is a minimalistic graphics editor on the web.",
+          "description": "Web Paint is&nbsp;a&nbsp;minimalistic graphics editor on&nbsp;the web.",
           "specialty": "Front-end, programming"
         },
         "ts": {
           "type": "Long-time project",
-          "description": "Typing School is minimalistic keyboard trainer to practice touch typing skill.",
+          "description": "Typing School is&nbsp;minimalistic keyboard trainer to&nbsp;practice touch typing skill.",
           "specialty": "Front-end, programming"
         },
         "LODFinal": {
           "type": "Hackathon",
-          "description": "Leaders of Digitals: Final 2021",
+          "description": "Leaders of&nbsp;Digitals: Final 2021",
           "specialty": "Front-end, programming"
         },
         "LODHS": {
           "type": "Hackathon",
-          "description": "Leaders of Digitals: Health and Science",
+          "description": "Leaders of&nbsp;Digitals: Health and Science",
           "specialty": "Front-end, programming"
         },
         "tsOld": {
@@ -36,12 +36,12 @@
         },
         "VK": {
           "type": "Hackathon",
-          "description": "VK Hackathon «Vezdekod»: Prize-winning place in the 2-week hackathon of the social network Vkontakte.",
+          "description": "VK&nbsp;Hackathon &laquo;Vezdekod&raquo;: Prize-winning place in&nbsp;the 2-week hackathon of&nbsp;the social network Vkontakte.",
           "specialty": "Front-end, Back-end"
         },
         "MIET": {
           "type": "Hackathon",
-          "description": "Hackathon «MIET University»: 1st place in the 48-hour hackathon of MIET University in the case of HERE technologies",
+          "description": "Hackathon &laquo;MIET University&raquo;: 1st place in&nbsp;the 48-hour hackathon of&nbsp;MIET University in&nbsp;the case of&nbsp;HERE technologies",
           "specialty": "Front-end, programming"
         }
       }
