@@ -7,6 +7,15 @@ const routes: Array<RouteRecordRaw> = [
     name: "Home",
     component: HomePage,
   },
+  {
+    path: "/bio",
+    name: "BIO",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "https://youtu.be/dQw4w9WgXcQ";
+    },
+    component: () => import("@/views/HomePage.vue"),
+  },
 ];
 
 const router = createRouter({
