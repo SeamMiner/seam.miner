@@ -15,11 +15,20 @@ const personalState = {
     Mail: "mailto:niatit130@gmail.com",
   },
   projects: [
+    // {
+    //   img: "Inkast.svg",
+    //   dateStart: "2022",
+    //   link: "https://beta.inkast.me/",
+    //   id: "inkast_beta",
+    // },
     {
+      description: "Inkast • Your soulmate is nearby",
+      specialty: "Front-end, DevOps, programming",
       img: "Inkast.svg",
       dateStart: "2022",
-      link: "https://beta.inkast.me/",
-      id: "inkast_beta",
+      type: "Long-time project",
+      link: "https://inkast.me/",
+      id: "inkast",
     },
     {
       img: "Okimi.svg",
@@ -62,15 +71,6 @@ const personalState = {
       dateEnd: "2022",
       link: "https://valkyries.netlify.app/",
       id: "valkyries",
-    },
-    {
-      description: "Inkast • Your soulmate is nearby",
-      specialty: "Front-end, DevOps, programming",
-      img: "Inkast.svg",
-      dateStart: "2022",
-      type: "Long-time project",
-      link: "https://inkast.me/",
-      id: "inkast",
     },
     {
       description: "Web Paint is a minimalistic graphics editor on the web.",
