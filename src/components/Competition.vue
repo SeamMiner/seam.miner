@@ -1,5 +1,5 @@
 <template>
-  <div class="competition">
+  <div class="competition" :id="project.id">
     <div class="time">
       {{ t(`Home.projects.decriptions.${project.id}.type`) || project.type }}
       <br />
@@ -84,6 +84,12 @@ export default defineComponent({
       font-weight: 500;
       font-size: 2.5rem;
       line-height: 3rem;
+
+      :deep(a) {
+        font-size: 1em;
+        line-height: 1em;
+        color: var(--selector);
+      }
     }
 
     > p {
@@ -103,9 +109,9 @@ export default defineComponent({
     }
 
     > img {
-      height: 2.875rem;
-      width: 2.875rem;
-      border-radius: 50%;
+      max-height: 2.875rem;
+      max-width: 2.875rem;
+      // border-radius: 50%;
     }
 
     > a {

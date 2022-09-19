@@ -9,6 +9,46 @@
       "now": "now",
       "open": "Open",
       "decriptions": {
+        "inkast_beta": {
+          "type": "Long-time project",
+          "description": "<a href='#inkast'>Inkast</a> beta-testing",
+          "specialty": "Front-end, DevOps, programming"
+        },
+        "okimi": {
+          "type": "Short-time project",
+          "description": "Ōkimi is&nbsp;a&nbsp;collection of&nbsp;3333 unique anime inspired avatars",
+          "specialty": "Front-end, Web3, programming"
+        },
+        "koda": {
+          "type": "Short-time project",
+          "description": "Cute little koda frens. Looks weird and damn cool at the same time",
+          "specialty": "Front-end, Web3, programming"
+        },
+        "hobopunks": {
+          "type": "Short-time project",
+          "description": "Criminal, lazy, worthless. Freedom in&nbsp;every sense of&nbsp;the word.",
+          "specialty": "Front-end, Web3, programming"
+        },
+        "neko": {
+          "type": "Short-time project",
+          "description": "Armed with small cuddly bodies and soft paws, these cats will protect its owner from negative energy and bring good luck.",
+          "specialty": "Front-end, Web3, programming"
+        },
+        "leg-drags": {
+          "type": "Short-time project",
+          "description": "Legendary Dragons game. Try to&nbsp;train a&nbsp;dragon and collect one of&nbsp;3333&nbsp;ERC-721 tokens on&nbsp;Ethereum blockchain.",
+          "specialty": "Front-end, Web3, GameDev, programming"
+        },
+        "valkyries": {
+          "type": "Short-time project",
+          "description": "NFT collection of&nbsp;4444 powerful women called Valkyries from Norse mythology living in&nbsp;Web3",
+          "specialty": "Front-end, Web3, programming"
+        },
+        "inkast": {
+          "type": "Long-time project",
+          "description": "Social network for soulmate search",
+          "specialty": "Front-end, DevOps, programming"
+        },
         "wp": {
           "type": "Long-time project",
           "description": "Web Paint is&nbsp;a&nbsp;minimalistic graphics editor on&nbsp;the web.",

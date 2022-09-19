@@ -143,6 +143,7 @@ section {
     place-items: center;
     transition: transform 1s cubic-bezier(0, -0.05, 1, -0.05);
     --scale: 1;
+    cursor: pointer;
   }
 
   #projects {

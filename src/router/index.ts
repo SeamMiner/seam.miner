@@ -16,6 +16,10 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import("@/views/HomePage.vue"),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: '/'
+  },
 ];
 
 const router = createRouter({
