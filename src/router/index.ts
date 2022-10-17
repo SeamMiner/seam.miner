@@ -17,8 +17,80 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/HomePage.vue"),
   },
   {
+    path: "/lod_hs",
+    name: "LOD_HS",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/LeadOfDig_2021.pdf";
+    },
+    component: () => import("@/views/HomePage.vue"),
+  },
+  {
+    path: "/lod_final",
+    name: "LOD_FINAL",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/LeadOfDig_final_2021.pdf";
+    },
+    component: () => import("@/views/HomePage.vue"),
+  },
+  {
+    path: "/here_2020",
+    name: "HERE_2020",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/Here_2020.jpg";
+    },
+    component: () => import("@/views/HomePage.vue"),
+  },
+  {
+    path: "/vezdekod_2020",
+    name: "vezdekod_2020",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/Vezdekod_VK_2020.pdf";
+    },
+    component: () => import("@/views/HomePage.vue"),
+  },
+  {
+    path: "/bonch_hack_2019",
+    name: "bonch_hack_2019",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/BonchDev_Hack_2019.jpg";
+    },
+    component: () => import("@/views/HomePage.vue"),
+  },
+  {
+    path: "/wsr_2020",
+    name: "wsr_2020",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/BonchSkills_2020.jpg";
+    },
+    component: () => import("@/views/HomePage.vue"),
+  },
+  {
+    path: "/wsr_2021",
+    name: "wsr_2021",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/BonchSkills_2021.jpg";
+    },
+    component: () => import("@/views/HomePage.vue"),
+  },
+  {
+    path: "/wsr_2022",
+    name: "wsr_2022",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/WSR_2022.pdf";
+    },
+    component: () => import("@/views/HomePage.vue"),
+  },
+  {
     path: "/:pathMatch(.*)*",
-    redirect: '/'
+    component: () => import("@/views/HomePage.vue"),
   },
 ];
 
