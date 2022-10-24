@@ -14,7 +14,7 @@ const routes: Array<RouteRecordRaw> = [
       window.location.href =
         "https://youtu.be/dQw4w9WgXcQ";
     },
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
   },
   {
     path: "/lod_hs",
@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
       window.location.href =
         "../files/LeadOfDig_2021.pdf";
     },
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
   },
   {
     path: "/lod_final",
@@ -32,7 +32,7 @@ const routes: Array<RouteRecordRaw> = [
       window.location.href =
         "../files/LeadOfDig_final_2021.pdf";
     },
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
   },
   {
     path: "/here_2020",
@@ -41,7 +41,7 @@ const routes: Array<RouteRecordRaw> = [
       window.location.href =
         "../files/Here_2020.jpg";
     },
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
   },
   {
     path: "/vezdekod_2020",
@@ -50,7 +50,7 @@ const routes: Array<RouteRecordRaw> = [
       window.location.href =
         "../files/Vezdekod_VK_2020.pdf";
     },
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
   },
   {
     path: "/bonch_hack_2019",
@@ -59,7 +59,7 @@ const routes: Array<RouteRecordRaw> = [
       window.location.href =
         "../files/BonchDev_Hack_2019.jpg";
     },
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
   },
   {
     path: "/wsr_2020",
@@ -68,7 +68,7 @@ const routes: Array<RouteRecordRaw> = [
       window.location.href =
         "../files/BonchSkills_2020.jpg";
     },
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
   },
   {
     path: "/wsr_2021",
@@ -77,7 +77,7 @@ const routes: Array<RouteRecordRaw> = [
       window.location.href =
         "../files/BonchSkills_2021.jpg";
     },
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
   },
   {
     path: "/wsr_2022",
@@ -86,11 +86,32 @@ const routes: Array<RouteRecordRaw> = [
       window.location.href =
         "../files/WSR_2022.pdf";
     },
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
+  },
+  {
+    path: "/cv_ru",
+    name: "cv_ru",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/CV_RU.pdf";
+    },
+    component: () => import("@/components/Loader/Loader.vue"),
+  },
+  {
+    path: "/cv_en",
+    name: "cv_en",
+    beforeEnter: (to, from, next) => {
+      window.location.href =
+        "../files/CV_EN.pdf";
+    },
+    component: () => import("@/components/Loader/Loader.vue"),
   },
   {
     path: "/:pathMatch(.*)*",
-    component: () => import("@/views/HomePage.vue"),
+    component: () => import("@/components/Loader/Loader.vue"),
+    redirect: {
+      name: "Home"
+    }
   },
 ];
 
