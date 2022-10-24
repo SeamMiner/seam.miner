@@ -1,96 +1,123 @@
 <template>
-  <section>
-    <div class="title">
-      <div class="topic">
-        <b>Platon Lapp</b>
-      </div>
-
-      <h1>
-        <span class="wrapper">
-          <span v-html="t('Home.about.title')"></span>
-          <div class="sticker developer" @click="stickerHandler">
-            <img
-              :src="require('@/assets/img/stickers/developer.svg')"
-              alt="Huh, I guess u've bad internet connection"
-            />
-          </div>
-          <div class="sticker light" @click="stickerHandler">
-            <img
-              :src="require('@/assets/img/stickers/light.svg')"
-              alt="Huh, I guess u've bad internet connection"
-            />
-          </div>
-          <div class="sticker world" @click="stickerHandler">
-            <img
-              :src="require('@/assets/img/stickers/world.svg')"
-              alt="Huh, I guess u've bad internet connection"
-            />
-          </div>
-          <div class="sticker SPb" @click="stickerHandler">
-            <img
-              :src="require('@/assets/img/stickers/SPb.svg')"
-              alt="Huh, I guess u've bad internet connection"
-            />
-          </div>
-        </span>
-      </h1>
-    </div>
-    <div class="about">
-      <a class="goDownButton" href="#projects">
-        <svg
-          width="302"
-          height="302"
-          viewBox="0 0 302 302"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M201.668 189.187V110.711C201.668 105.083 206.219 100.521 211.834 100.521C217.448 100.521 222 105.083 222 110.711V210.114C222 216.679 216.691 222 210.143 222L114.448 222C108.705 222 104.05 217.334 104.05 211.578C104.05 205.821 108.705 201.155 114.448 201.155H183.485L83.0419 98.1798C78.986 94.0216 78.986 87.3776 83.0419 83.2194C87.2289 78.9268 94.1191 78.9268 98.3061 83.2194L201.668 189.187Z"
-            fill="currentColor"
-          />
-        </svg>
-      </a>
-      <p class="description" v-html="t('Home.about.description')"></p>
-
-      <div class="skills">
-        <div
-          class="skill"
-          v-for="skill in store.state.personal.skills"
-          :key="skill"
-        >
-          {{ skill }}
+  <div class="container">
+    <a class="telegram" href="https://t.me/SeamMiner">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM14.81 6.87873L7.06987 10.9036C6.18037 11.3661 6.44906 12.7041 7.44817 12.7873L9.63481 12.9696C9.87052 12.9892 10.0916 13.0918 10.2589 13.259L13.5541 16.5542C14.1425 17.1426 15.1502 16.7969 15.2535 15.9711L16.2636 7.88998C16.3636 7.0903 15.525 6.50692 14.81 6.87873Z"
+          fill="currentColor"
+        />
+      </svg>
+      @SeamMiner
+    </a>
+    <section>
+      <div class="title">
+        <div class="topic">
+          <b>Platon Lapp</b>
         </div>
-      </div>
-      <p class="links">
-        <Link
-          v-for="(link, name) in store.state.personal.links"
-          :key="name"
-          :link="link"
-          >{{ name }}</Link
-        >
-      </p>
-    </div>
-    <div id="projects">
-      <template v-for="project in store.state.personal.projects" :key="project">
-        <Competition :project="project" />
-      </template>
-    </div>
 
-    <div class="university">
-      <h2 v-html="t('Home.about.university')"></h2>
-      <span>2019&nbsp;&mdash; 2023</span>
+        <h1>
+          <span class="wrapper">
+            <span v-html="t('Home.about.title')"></span>
+            <div class="sticker developer" @click="stickerHandler">
+              <img
+                :src="require('@/assets/img/stickers/developer.svg')"
+                alt="Huh, I guess u've bad internet connection"
+              />
+            </div>
+            <div class="sticker light" @click="stickerHandler">
+              <img
+                :src="require('@/assets/img/stickers/light.svg')"
+                alt="Huh, I guess u've bad internet connection"
+              />
+            </div>
+            <div class="sticker world" @click="stickerHandler">
+              <img
+                :src="require('@/assets/img/stickers/world.svg')"
+                alt="Huh, I guess u've bad internet connection"
+              />
+            </div>
+            <div class="sticker SPb" @click="stickerHandler">
+              <img
+                :src="require('@/assets/img/stickers/SPb.svg')"
+                alt="Huh, I guess u've bad internet connection"
+              />
+            </div>
+          </span>
+        </h1>
+      </div>
+      <div class="about">
+        <a class="goDownButton" href="#projects">
+          <svg
+            width="302"
+            height="302"
+            viewBox="0 0 302 302"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M201.668 189.187V110.711C201.668 105.083 206.219 100.521 211.834 100.521C217.448 100.521 222 105.083 222 110.711V210.114C222 216.679 216.691 222 210.143 222L114.448 222C108.705 222 104.05 217.334 104.05 211.578C104.05 205.821 108.705 201.155 114.448 201.155H183.485L83.0419 98.1798C78.986 94.0216 78.986 87.3776 83.0419 83.2194C87.2289 78.9268 94.1191 78.9268 98.3061 83.2194L201.668 189.187Z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+        <p class="description" v-html="t('Home.about.description')"></p>
+
+        <div class="skills">
+          <div
+            class="skill"
+            v-for="skill in store.state.personal.skills"
+            :key="skill"
+          >
+            {{ skill }}
+          </div>
+        </div>
+        <p class="links">
+          <Link
+            v-for="(link, name) in store.state.personal.links"
+            :key="name"
+            :link="link"
+            >{{ name }}</Link
+          >
+        </p>
+      </div>
+      <div id="projects">
+        <template
+          v-for="project in store.state.personal.projects"
+          :key="project"
+        >
+          <Competition :project="project" />
+        </template>
+      </div>
+
+      <div class="university">
+        <h2 v-html="t('Home.about.university')"></h2>
+        <span>2019&nbsp;&mdash; 2023</span>
+      </div>
+      <div class="sticker world" @click="stickerHandler">
+        <img
+          :src="require('@/assets/img/stickers/world.svg')"
+          alt="Huh, I guess u've bad internet connection"
+        />
+      </div>
+    </section>
+  </div>
+  <footer ref="footer">
+    <h1>Platon Lapp</h1>
+    <div class="links">
+      <Link
+        v-for="(link, name) in store.state.personal.links"
+        :key="name"
+        :link="link"
+        >{{ name }}</Link
+      >
     </div>
-    <div class="sticker world" @click="stickerHandler">
-      <img
-        :src="require('@/assets/img/stickers/world.svg')"
-        alt="Huh, I guess u've bad internet connection"
-      />
-    </div>
-  </section>
+  </footer>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent, onMounted, onUnmounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 
@@ -117,11 +144,41 @@ export default defineComponent({
       }, 10000);
     };
 
+    const footer = ref<null | HTMLElement>(null);
+    const initialBg = computed(() =>
+      store.state.theme.colors
+        .find((color: any) => color.name === "primary-bg")
+        .value.get(store.state.theme.activeTheme)
+    );
+
+    const scroll = () => {
+      let elPosition = footer.value!.getBoundingClientRect();
+
+      if (elPosition.y - window.innerHeight < 0) {
+        document.documentElement.style.setProperty("--primary-bg", "#000000");
+      } else {
+        document.documentElement.style.setProperty(
+          "--primary-bg",
+          initialBg.value
+        );
+      }
+    };
+
+    onMounted(() => {
+      document.addEventListener("scroll", scroll);
+    });
+
+    onUnmounted(() => {
+      document.removeEventListener("scroll", scroll);
+    });
+
     return {
       t,
       route,
       store,
       stickerHandler,
+      footer,
+      initialBg,
     };
   },
 });

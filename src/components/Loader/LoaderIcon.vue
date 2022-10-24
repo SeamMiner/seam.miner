@@ -7,8 +7,7 @@
   width: 50px;
   height: 50px;
   border: solid 4px;
-  border-color: var(--selector) var(--selector) var(--selector)
-    transparent;
+  border-color: var(--selector) var(--selector) var(--selector) transparent;
   border-radius: 50%;
   position: relative;
   animation: loading 1.6s linear infinite;

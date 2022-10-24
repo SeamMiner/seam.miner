@@ -1,29 +1,5 @@
 <template>
-  <div class="container">
-    <a class="telegram" href="https://t.me/SeamMiner">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM14.81 6.87873L7.06987 10.9036C6.18037 11.3661 6.44906 12.7041 7.44817 12.7873L9.63481 12.9696C9.87052 12.9892 10.0916 13.0918 10.2589 13.259L13.5541 16.5542C14.1425 17.1426 15.1502 16.7969 15.2535 15.9711L16.2636 7.88998C16.3636 7.0903 15.525 6.50692 14.81 6.87873Z"
-          fill="currentColor"
-        />
-      </svg>
-      @SeamMiner
-    </a>
-    <router-view />
-  </div>
-  <footer ref="footer">
-    <h1>Platon Lapp</h1>
-    <div class="links">
-      <Link
-        v-for="(link, name) in store.state.personal.links"
-        :key="name"
-        :link="link"
-        >{{ name }}</Link
-      >
-    </div>
-  </footer>
+  <router-view />
 </template>
 
 <script lang="ts">
@@ -38,22 +14,11 @@ import {
 import { useI18n } from "vue-i18n";
 import { useStore } from "vuex";
 
-import Link from "@/components/Link.vue";
-
 export default defineComponent({
-  components: {
-    Link,
-  },
   setup() {
     const { locale, t, availableLocales } = useI18n();
     const store = useStore();
     const userLang = navigator.language;
-    const footer: Ref<null | HTMLElement> = ref(null);
-    const initialBg = computed(() =>
-      store.state.theme.colors
-        .find((color: any) => color.name === "primary-bg")
-        .value.get(store.state.theme.activeTheme)
-    );
 
     store.dispatch("theme/init");
     locale.value = userLang;
@@ -70,27 +35,12 @@ export default defineComponent({
       }
     };
 
-    const scroll = () => {
-      let elPosition = footer.value!.getBoundingClientRect();
-
-      if (elPosition.y - window.innerHeight < 0) {
-        document.documentElement.style.setProperty("--primary-bg", "#000000");
-      } else {
-        document.documentElement.style.setProperty(
-          "--primary-bg",
-          initialBg.value
-        );
-      }
-    };
-
     onMounted(() => {
       document.addEventListener("keydown", shortCut);
-      document.addEventListener("scroll", scroll);
     });
 
     onUnmounted(() => {
       document.removeEventListener("keydown", shortCut);
-      document.removeEventListener("scroll", scroll);
     });
 
     const style =
@@ -102,8 +52,6 @@ export default defineComponent({
 
     return {
       store,
-      footer,
-      initialBg,
     };
   },
 });
